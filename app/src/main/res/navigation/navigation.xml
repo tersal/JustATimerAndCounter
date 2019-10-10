@@ -24,7 +24,7 @@
         tools:layout="@layout/fragment_timer" />
     <fragment
         android:id="@+id/counterFragment"
-        android:name="com.example.justatimerandcounter.CounterFragment"
+        android:name="com.example.justatimerandcounter.screens.counter.CounterFragment"
         android:label="@string/counter_fragment_header"
         tools:layout="@layout/fragment_counter" />
     <fragment
