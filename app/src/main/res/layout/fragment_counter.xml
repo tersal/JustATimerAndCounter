@@ -3,7 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.justatimerandcounter.CounterFragment">
+    tools:context="com.example.justatimerandcounter.screens.counter.CounterFragment">
+
+    <data>
+        <variable
+            name="counterViewModel"
+            type="com.example.justatimerandcounter.screens.counter.CounterViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -25,11 +32,38 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="cursive"
+            android:onClick="@{() -> counterViewModel.onCountIncrease()}"
             android:text="@string/count_increase"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/count_decrement"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/counter_number" />
+
+        <Button
+            android:id="@+id/count_decrement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:onClick="@{() -> counterViewModel.onCountDecrease()}"
+            android:text="@string/decrement_string"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/count_increment"
+            app:layout_constraintTop_toBottomOf="@+id/counter_number" />
+
+        <Button
+            android:id="@+id/counter_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="cursive"
+            android:onClick="@{() -> counterViewModel.onCountReset()}"
+            android:text="@string/reset_string"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

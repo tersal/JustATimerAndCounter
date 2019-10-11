@@ -12,8 +12,7 @@
     <string name="counter_fragment_header">Counter</string>
     <string name="timer_fragment_header">Timer</string>
     <string name="about_fragment_header">About</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="about_menu_string">About</string>
+    <string name="decrement_string">Decrement</string>
+    <string name="reset_string">Reset</string>
 </resources>
