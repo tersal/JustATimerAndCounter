@@ -15,7 +15,15 @@ class CounterViewModel: ViewModel() {
         _score.value = 0
     }
 
-    fun onCount() {
+    fun onCountIncrease() {
         _score.value = _score.value?.plus(1)
+    }
+
+    fun onCountDecrease() {
+        _score.value = _score.value?.minus(1)
+    }
+
+    fun onCountReset() {
+        _score.value = 0
     }
 }
