@@ -15,4 +15,5 @@
     <string name="about_menu_string">About</string>
     <string name="decrement_string">Decrement</string>
     <string name="reset_string">Reset</string>
+    <string name="stop_button_text">Stop</string>
 </resources>

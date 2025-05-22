@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/timerFragment"
-        android:name="com.example.justatimerandcounter.TimerFragment"
+        android:name="com.example.justatimerandcounter.screens.timer.TimerFragment"
         android:label="@string/timer_fragment_header"
         tools:layout="@layout/fragment_timer" />
     <fragment
